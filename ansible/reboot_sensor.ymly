@@ -1,0 +1,11 @@
+--- 
+
+-name: Reboot sensor 
+ hosts: sensors 
+ become: yes 
+ gather_facts: no 
+
+ tasks: 
+    - name: Reboot VM 
+      ansible.builtin.reboot: 
+      reboot_timeout: 600 
